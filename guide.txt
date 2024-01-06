@@ -1,0 +1,16 @@
+-----How to Build and Run Docker Image-----
+
+Build the Docker Image:
+    docker build -t your_image_name .
+
+Run the Docker Container:
+    docker run -v /path/on/host/Desktop:/app your_image_name
+Replace "/path/on/host/Desktop" with the absolute path to your "Desktop" folder on the host machine.
+
+If your code doesn't depend on an environment file, you can comment out the line:
+# COPY .env /app/
+
+Script Changes:
+Check the script for modifications marked with comments like #change. These are adjustments made for containerized environment paths.
+This will mount your host machine's "Desktop" folder to the "/app" directory inside the container. Adjust the path accordingly based on your host system.
+
